@@ -57,7 +57,22 @@ railway.json            Railway build/deploy config
 DEPLOY.md               step-by-step Railway deployment
 ```
 
-## Local development
+## Quick start (one command)
+
+With [Docker Desktop](https://www.docker.com/products/docker-desktop/) running
+and a [Steam Web API key](https://steamcommunity.com/dev/apikey) in hand, from
+the repo root on macOS / Linux / WSL / Git Bash:
+
+```bash
+./start.sh
+```
+
+It brings up Postgres + Redis, writes `server/.env` (prompting once for your
+Steam key, auto-generating `SESSION_SECRET`), installs dependencies, and starts
+both the API (:3001) and client (:5173). Open http://localhost:5173. Your key
+and secret live only in `server/.env`, which is git-ignored — never committed.
+
+## Local development (manual)
 
 Two terminals, with Postgres + Redis from Docker.
 
