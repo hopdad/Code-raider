@@ -1,0 +1,27 @@
+{
+  "name": "code-raider",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "scripts": {
+    "start":      "node server/index.js",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "cd client && npm run dev",
+    "build":      "cd client && npm install && npm run build",
+    "install:all":"npm install && cd client && npm install"
+  },
+  "dependencies": {
+    "connect-redis":   "^7.1.1",
+    "cors":            "^2.8.5",
+    "dotenv":          "^16.4.5",
+    "express":         "^4.19.2",
+    "express-session": "^1.18.0",
+    "passport":        "^0.7.0",
+    "passport-steam":  "^1.0.18",
+    "pg":              "^8.12.0",
+    "redis":           "^4.6.15",
+    "socket.io":       "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
